@@ -1,0 +1,117 @@
+<!-- Time to get to some basic styling! Then we have just one more lesson on Bootstrap after this -->
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Checkpoint #3</title>
+
+        <!-- Time to add one new tag! -->
+        <!-- This is the style tag. 
+            Note everything in this can be put in a .css file and linked, but for brevity we'll use the style tag. -->
+            <style>
+                /* Woah! Comments are different here. Take note. */
+                /* It's different because we are using CSS3 syntax, or formatting now. */
+                /* Anyways, there are 3 basic ways to style things here. Note the format-
+                it stays the same for basically everything in CSS3 */
+
+                /* The basic format for formatting entire tags is: */
+                /* tag-name: { 
+                    property: value;
+                } */
+
+                /* Let's make the body's background black, and the text white! */
+
+                body {
+                    /* For a full list of style-names, look here https://www.w3schools.com/cssref/*/
+
+                    /* "background-color" takes a color for a value. We can say black, use a hex number, or rgba(red,green,blue,alpha) for the color */
+                    /* Like the name implies, it sets the background-color */
+                    background-color: black;
+
+                    /* "color" changes the color of the text, alongside some other things like buttons. */
+                    /* #FAFAFA is my favorite off-white color! Use google for a color picker that gives */
+                    /* CSS friendly values. */
+                    color: #FAFAFA;
+                }
+
+                /* Now let's style the header, footer, and content elements and give them a blue border. */
+                /* Because div is used for many things, we need something more specific than styling the div tag */
+                /* We'll use classes! We can give an element classes by using the "class" attribute. See below for examples of this */
+
+                /* To select a class in CSS we do the following: */
+                /* .class-name {
+                    property: value;
+                    property2: value;
+                } */
+
+                .section {
+                    
+                    /* To do borders, we can reference this https://www.w3schools.com/cssref/pr_border.asp */
+                    /* This is an example of using rgba as well! Note that opacity is from 0-1 with 1 being opaque */
+                    border: 5px solid rgba(0, 40, 255, 1); 
+
+                    /* We can also add a margin to make space for elements outside of the border. https://www.w3schools.com/css/css_margin.asp */
+                    margin: 50px 50px 50px 50px;
+
+                    /* Padding is also important, and very similar with one important distinction- it creates space inside the border of the element. https://www.w3schools.com/css/css_padding.asp */
+                    padding: 20px 20px 20px 20px;
+
+                }
+
+                /* Here's another class rule, to make some text red! */
+                .red-text {
+                    color: rgb(206, 55, 55); 
+                    /* We can also use RGB instead of RGBA if we don't need transparency. */
+                }
+
+                /* Finally, lets style a name, or "id". We'll add a font, align it, and adjust the height and width of the title. */
+                #title{
+
+                    /* The font-family property controls the font to use. Pass a font name to change the font! */
+                    /* For now, we can only use web safe fonts. We'll get more later https://www.w3schools.com/css/css_font_websafe.asp */
+                    font-family: 'Brush Script MT'; 
+                    /* Make sure to use quotation marks if you can, for font names. */
+
+                    /* Let's increase the font size. See the many ways to do this here https://www.w3schools.com/css/css_font_size.asp */
+                    font-size: 72px;
+
+                    /* We can also align our text using text-align. NO quotation marks here! */
+                    text-align: center;
+                    /* We'll find an alternate way to do this next checkpoint. */
+
+                    /* We'll adjust the height and width. This should be familiar */
+                    height: 20%;
+                    width: 100%;
+                }
+
+                /* Awesome! And that's the basics of CSS. Now let's create our elements to be styled. */
+
+            </style>
+    </head>
+
+    <body>
+        <!-- Remember the class attribute? You can actually add multiple by seperating classes with a space -->
+        <div id="header" class="section red-text">
+            <h1 id="title">Look at This Cool Page</h1>
+        </div>
+        <br>
+        <!-- We can have multiple elements with the same class, but id MUST be unique! -->
+        <div class="section">
+            <p>
+                Wow! Look at this cool white text.
+            </p>
+        </div>
+
+        <div class="section">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">
+                This text isn't styled, because no CSS rule matches the a tag! CSS Rules also have a priority, which is listed at this link. That's why the color rule for section class doesn't apply- as the color:blue from the a tag supersedes it!
+            </a>
+            <br>
+            <a href="checkpoint2.html">
+                Click here to go back to checkpoint 2.
+            </a>
+        </div>
+    </body>
+
+</html>

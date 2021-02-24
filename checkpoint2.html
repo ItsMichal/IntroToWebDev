@@ -1,0 +1,103 @@
+<!-- Okay, if you have trouble understanding anything, check back in with Checkpoint #1 -->
+<!-- This builds directly on top of that. We're going to use some more interesting tags! -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkpoint #2</title>
+    </head>
+    <body>
+        <!-- Welcome back! You should be familiar with the "!DOCTYPE","html","head","title","body","h#", and "p" tags work. Let's dive into some other essentials. -->
+
+        <!-- The "div" tag is short for divider. It helps seperate and section your content, and will be very useful in conjunction with Bootstrap later on. -->
+        <!-- Use a "div" to seperate different sections of your site. In this case, we'll use a short bio site as an example. -->
+
+        <!-- We're also going to introduce you to "attributes". Attributes give elements (what we call an instance of a tag) certain properties that are useful for us. -->
+        <!-- For example, we're going to give this div an id, which will tell us its the header section of our website. -->
+        <!-- ALTERNATIVELY- you can use the "header" tag, but this is not common practice yet, so we'll ignore it for now. -->
+        
+        <!-- We can set attributes by using attribute-name="attribute-value" within the element's start tag, like so --> 
+        <div id="header"> 
+            <!-- Awesome! We have our header section. Let's put our name on our bio website. -->
+            <!-- We'll also name it too with an id. This will be useful for later! -->
+            <h1 id="my_name">Michal Bodzianowski</h1>
+
+        </div>
+
+        <!-- We'll use an "hr" here to neatly separate our divisions with a horizontal line -->
+        <hr>
+
+        <div id="content">
+
+            <!-- Now let's add an image. This will be a little more complicated, and we'll have to use -->
+            <!-- our new knowledge of attributes to do this successfully. -->
+
+            <!-- There are two ways to add an image- add one online, or add one locally. Let's do both! -->
+
+            <!-- First, make sure there's a path to the image if adding locally. This means, you should know how to get from your .html file to your .png! (or .jpeg, or .gif, I don't judge.) -->
+            <!-- Did you notice the "img" folder? There's a picture of me in there! We can access it with the path "img/handsome_man.png"-->
+            <!-- It's a good practice to keep any images or assets you are using in their own folders, so they stay organized! -->
+
+            <!-- Now that we have the path, let me introduce you to the "img" tag. -->
+            <!-- It takes 2 required attributes for it to work, and we'll introduce 2 more optional, yet useful ones as well -->
+            <!-- First attribute is "src". This tells us the location, or path of the image. In our case, "img/handsome_man.png" -->
+            <!-- Second attribute is "alt". This describes the image, in case it can't be loaded, or needs to be accessed by a screenreader to handicapped. 
+                It's very important for accessibility, so don't forget it! -->
+            <!-- Finally, we can use a "width" and "height" attribute to size the image to our liking. 
+                These can take either a pixel value ("500px") or percentage value ("50%"), which takes the parent element (what we call the div that encapsulates this) 
+                and sets the image size to 50% of that!
+                You can even set one or both of the values to auto to keep the aspect ratio of the image!
+            -->
+            <!-- We'll get into more advanced ways to size and format websites, but this should do for now. -->
+
+            <!-- Without further ado... -->
+            <img src="img/handome_man.png" alt="Michal Bodzianowski Profile Shot" width="200px" height="auto">
+
+
+            <!-- If you remove this "br" tag, you'll notice the images go on the same line. This is because unlike
+                div, p, or h#, the img tag does not break lines. To add a line break, we can add a "br" tag.
+                OPTIONAL: Try using an "hr" tag to spice things up with another horizontal line!
+            -->
+            <br>
+
+            <!-- We can also use an image URL for an online image. Right-click using a web browser to get the Image Url, and then put it in source, like so. -->
+            <img src="http://michal.us/assets/img/norlin.jpg" alt="CU Boulder Leeds School" width="20%" height="auto">
+
+            <!-- Perfect! That's the img tag. You can now put images in your site! -->
+            <!-- Woo-hoo! All together, that wasn't so bad is it? Read more about the img tag here- https://www.w3schools.com/tags/tag_img.asp -->
+
+        </div>
+
+        <hr>
+
+        <!-- Now let's introduce probably the most important tag, "a" in our footer. Also buttons! -->
+        <div id="footer">
+            <!-- Usually, the footer of the site includes links, so let's create one with an "a" tag! -->
+            <!-- Like "img", the "a" tag uses attributes to work properly. -->
+            <!-- The href attribute specifies the URL of the local or online website to link to! -->
+
+            <!-- We can link to an online page... -->
+            <a href="https://michal.us">My Website</a>
+
+            <!-- Let's add a seperator, because just like "img", the "a" tag
+                DOES NOT break lines! It's also perfectly okay to sometimes add content
+                not in a "p"/"h#"/"a" tag, as long as its inside a "div"!
+
+                &nbsp; is a useful tool to add spaces where it might not be obvious
+                to your web browser. Writing &nbsp; tells your browser you DEFINITELY
+                want a space there. The following html is rendered as " | ".
+            -->
+            &nbsp;|&nbsp;
+
+            <!-- Or if you remember how to use paths, we can even link to a local page! -->
+            <a href="checkpoint1.html">Back to Checkpoint #1</a>
+
+        </div>
+
+        <!-- Awesome! We now know enough tags to get to styling. We're almost at Bootstrap and your first own page! -->
+
+        <!-- To learn more about tags, I highly recommend this resource. https://www.w3schools.com/tags/  -->
+        <!-- I recommend learning about the "table" tag, and "video" as well. "iframe" is also useful sometimes! -->
+
+    </body>
+</html>
