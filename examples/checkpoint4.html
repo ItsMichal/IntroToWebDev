@@ -1,0 +1,216 @@
+<!-- Okay! Time to make our website look professional. -->
+<!-- Making a website look professional just with CSS can be hard, tedious, and time consuming -->
+<!-- CSS packages like Bootstrap help solve this issue by using preexisting code. Let's try it! -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Checkpoint #4</title>
+
+        <!-- Visit https://getbootstrap.com/ to learn how to install bootstrap locally for more themeing options! -->
+        <!-- For now, we will use the jsDelivr CDN. CDN's help us include packages like Bootstrap without having to install it -->
+        <!-- We'll introduce the "link" and "script" tags here. -->
+        <!-- "link" tags are used exclusively in the head portion, and are a way to include CSS that isn't on your website -->
+        <!-- "script" tags can be used in both places, and allow you to write javascript. However, we won't go into that here. -->
+        <!-- "script" tags in the header are exclusively used to include javascript from other sources, by using the "src" attribute -->
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- The href and rel attributes tell us where we are linking from and what we are linking. The integrity and crossorigin tags are for security purposes, don't worry about them. -->
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <!-- Adding the src attribute to a script tag allows you to download javascript from another source, either locally or online. -->
+
+        <!-- And that's it! Bootstrap is installed. Let's check it out. -->
+    </head>
+
+    <body>
+        <!-- In order to fully utilize Bootstrap, we'll have to organize our HTML in a new way. -->
+
+        <!-- At the top should be the navbar. This "nav" element alongside adding Bootstrap classes will help us to do this. -->
+        <!-- https://getbootstrap.com/docs/5.0/components/navbar/ for reference! -->
+
+        <!-- In order for bootstrap to work, we have to add specific classes to tell it how to style our elements. -->
+        <!-- In this case, we need the "navbar" class to tell it it is a navbar -->
+        <!-- "navbar-expand-lg" means that on large screens, we should see the full navbar (dw about this- its Bootstrap magic.) -->
+        <!-- The "navbar-light" tells it it needs to be light colored -->
+        <!-- And the "bg-light" also sets the background to light -->
+        <!-- All without any CSS!!! -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <!-- Now we need to add a container. Everything in Bootstrap should ideally be in a "container" div -->
+            <!-- This allows Bootstrap to automatically resize things so they look good on your phone too! -->
+            <!-- You can either use "container" which is fixed-width, or "container-fluid" which will "fill" your screen! -->
+            <!-- In this case, we'll use "container-fluid" -->
+            <div class="container-fluid">
+
+                <!-- We'll introduce another element here, "span" -->
+                <!-- "span" is identical to "div", but it doesn't break lines like "div" does -->
+                <!-- This makes it ideal for text that doesn't need a line break, like here! -->
+
+                <!-- We can find these bootstrap classes in the example link above, by the way! -->
+                <!-- In any case, navbar-brand tells Bootstrap this is the title of our Navbar -->
+                <!-- mb-0 sets the (m)argin (b)ottom to 0. (Yes, you can easily set margin or padding using m/p-#!) -->
+                <!-- And "h1" styles the text the same way an h1 element would! -->
+                <span class="navbar-brand mb-0 h1">ProCo.</span>
+
+                <!-- Don't worry too much about this- just know that we need it. You can actually just copy direct from the examples at Bootstrap! -->
+                <!-- In case you are curious, this allows for a mobile-friendly experience by collapsing the whole navbar on a phone! -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- We need to create a div that tells us what will collapse on a mobile phone. -->
+                <!-- In this case, its copied direct from bootstrap, so don't worry. It's totally fine to copy their code as long as you don't claim it as your own! -->
+                <div class="collapse navbar-collapse" id="navbarText">
+
+                    <!-- Okay, sorry about having to sweep some Bootstrap magic under the rug for now, but let's go back to things you should understand. -->
+
+                    <!-- "ul" and "li" are two new elements. "ul" simply means an unordered list, and "li" is a list element! -->
+                    <!-- We'll use these to create links in our navbar -->
+
+                    <!-- The "navbar-nav" class allows this unordered list to be styled properly in a navbar! -->
+                    <ul class="navbar-nav">
+
+                        <!-- Likewise, "nav-item" tells Bootstrap this is an item in the navbar -->
+                        <li class="nav-item">
+                            
+                            <!-- For best practices, we'll create a redundant link to this page. -->
+                            <!-- "nav-link" styles this "a" element for the navbar -->
+                            <!-- "active" lets us know we are actually on this page right now. -->
+                            <!-- We use href="#" to link to the current page- it's a neat trick! -->
+                            <a class="nav-link active" href="#">Home</a>
+
+                        </li>
+                        <!-- Finally, let's link to another local page for now. This is how we can make multi-page websites! -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="checkpoint3.html">Checkpoint #3</a>
+                        </li>
+
+                        <!-- Feel free to add more links if you like! -->
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- And that's the navbar! We had our first run in with Bootstrap magic. Don't worry about it being too complicated. -->
+        <!-- Bootstrap puts all their examples and resources you can reference on their site. Here's the one for navbar again! https://getbootstrap.com/docs/5.0/components/navbar/ -->
+
+        <!-- Okay, remember how we said we should put things in a container? Let's do that first. -->
+        <!-- From now on, we'll start giving unique Ids to each element. 
+            This is a really good practice if you have the time, especially for important elements. -->
+        <div id="mainContainer" class="container-fluid">
+
+            <!-- Okay, let's add a cool image to the top of our page. We'll do the same as before but add the Bootstrap "img-fluid" class  -->
+            <!-- We'll set the width to 100% so it fills up the container -->
+            <img src="https://www.concertoplus.eu/wp-content/uploads/2016/08/cre-page-banner.jpg" alt="Renewable Energy" class="img-fluid">
+
+            <!-- Let's now add a jumbotron! This is actually my favorite element. -->
+            <!-- ...and it turns out they removed it. So let's make our own instead! -->
+
+            <!-- So let's start with a container. Yes! We can have containers in our containers. -->
+            <!-- Jumbotrons used to have quite the padding. So we'll use p-5 to replicate this. -->
+            <!-- We'll also need some margin. Did someone say mt-5? and mb-5? (We don't need side margins.) -->
+            <!-- And Bootstrap says to use bg-light, so we'll use that to give a light background -->
+            <div id="jumbotron_new" class="container mt-5 mb-5 p-5 bg-light">
+
+                <!-- Okay, we can even add fancy formatting to our text! I'm partial to display-#, where # is how big it is. -->
+                <!-- fs-# helps us select the font size, where, oddly, smaller is bigger! -->
+                <h1 class="diplay-1 fs-1">Welcome to ProCo.'s Website.</h1>
+
+                <!-- And we gotta tell the people who we are right? We can just use a normal p element here. -->
+                <!-- With fs-4 so it isn't so small... -->
+                <p class="fs-4">Welcome to ProCo. we aim to make a world a better place by providing unlimited renewable energy. Join us on our journey to the center of the earth's energy issues!</p> 
+
+            </div>
+
+            <!-- We'll create another container to keep this section in. -->
+            <div class="container" id="main">
+
+                <!-- Okay, now let's add some rows and cards. -->
+                <!-- Bootstrap uses a rows and columns way to organize elements. In this case, we'll have cards. -->
+                <!-- First, lets create our first row to put columns on. -->
+                <div class="row" id="firstRow">
+                    <!-- Now the way columns work, is that each row has 12 slots. If you want 3 columns, you'll have 3 columns of width 4. These 12 slots must be filled! -->
+                    <!-- Alternatively, you can not specify the slots number, and bootstrap will automatically figure it out. Magic, huh? We'll show both ways. -->
+
+                    <!-- Our first and last columns will be slightly smaller than the middle one. -->
+                    <!-- To specify a column, you either use the "col" class or "col-#" where # is the slots you want to take up. -->
+                    <div class="col-3">
+
+                        <!-- Okay! Now we can make our card in here. -->
+                        <!-- We'll use https://getbootstrap.com/docs/5.0/components/card/ for reference. -->
+                        <!-- First, we create a our card element. With the class "card" for bootstrap -->
+                        <div class="card">
+                            <!-- We can add an image to the top of our card. Since we're a renewable energy company... how about a wind turbine panel? -->
+                            <!-- We'll add the "card-img-top" class to let Bootstrap know that this is the image at the top of the card -->
+                            <img src="img/wind_turbine.jpg" alt="Wind Turbines" class="card-img-top img-fluid">
+
+                            <!-- Now let's get into the meat of the card, or at least, the card-body -->
+                            <div class="card-body">
+                                <!-- Bootstrap's example uses h5 for the title, and we'll need card-title as well -->
+                                <h5 class="card-title">Wind Turbines</h5>
+                                <!-- We'll add some sample text as well. "card-text" is used for this -->
+                                <p class="card-text">Wind Turbines aren't the only solution to our energy issues, but are a great addition to our arsenal of clean technologies. Find out more about Wind Turbines!</p>
+                                <!-- And finally, add a link in the style of a button! -->
+                                <!-- the "btn" class styles it as a button -->
+                                <!-- and the "btn-primary" makes it the primary color, blue! -->
+                                <a href="https://www.energy.gov/eere/wind/how-do-wind-turbines-work" class="btn btn-primary">DoE Site on Turbines</a>
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+
+                    <!-- Let's add some more cards and columns. This one will be auto-sized! -->
+                    <div class="col">
+                        <div class="card">
+                            <img src="https://images.newscientist.com/wp-content/uploads/2020/01/24134347/csm_cp13j-033-005-e1456216897771_a47541588c.jpg" alt="Fusion Reactor" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h5 class="card-title">Fusion Reactors</h5>
+                                <p class="card-text">Fusion Reactors can solve a lot of energy problems, but first we have to solve the scientific and public perception problems with them.</p>
+                                <a href="https://www.nature.com/articles/d41586-021-00408-1" class="btn btn-primary">Read about the UK test run.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Finally, let's add one more column. -->
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://www.reenergizeco.com/wp-content/uploads/2020/04/solar-panel-investment.jpg" alt="Solar Panels" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h5 class="card-title">Solar Panels</h5>
+                                <p class="card-text">Solar panels are great, and becoming cheaper and cheaper every day. They are a great way for individual consumers to go green.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Okay! Let's create a basic footer and wrap this website up! -->
+            <!-- We'll use the the text-center class to align our text. -->
+            <!-- We'll color it referencing this https://getbootstrap.com/docs/5.0/customize/color/#theme-colors -->
+            <!-- And add some margin and padding. -->
+            <div class="container text-center text-secondary mt-3 p-3" id="footer">
+                <p>Thanks for visiting ProCo.!</p>
+            </div>
+
+        </div>
+
+        <!-- Thanks for following my Intro to Web Dev! Here's some resources to learn more -->
+        <!-- https://getbootstrap.com/ -->
+        <!-- https://www.freecodecamp.org/learn/responsive-web-design/ -->
+        <!-- https://uxplanet.org/a-primer-to-web-accessibility-for-designers-2c548448c612         -->
+        <!-- https://validator.w3.org/ - note these sites won't validate as we didn't learn meta tags -->
+
+        <!-- Challenge- create a website for a fictional non-profit of your choosing! Bonus points for multiple web pages! -->
+
+    </body>
+
+</html>
